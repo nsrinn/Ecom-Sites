@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6e4f86569d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- <div class="container"> -->
+    <header>
+        <!-- header section -->
+        <div class="container">
+                <div class="header-top">
+                    <div class="content">
+                        <div class="logo">
+                            <img src="LogoVector.png" alt="" class="img-logo">
+                        </div>
+
+                        <input type="checkbox" id="menu-toggle">
+                        <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+                        <div class="nav-items">
+                            <div class="searchfield">
+                                <i class="fa-solid fa-magnifying-glass"></i><input type="search" placeholder="Search" id="search">
+                            </div>
+                            <div class="nav">
+                                <ul>
+                                    <li> <a href="" id="active">Home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="sub-nav">
+                    <div class="sub">
+                        <div class="sub-sec" >
+                            <i class="fa-solid fa-mobile"></i>
+                            <span class="sec1-item">Phone</span>
+                            <span class="span">|</span>
+                        </div>
+                        <div class="sub-sec" >
+                            <i class="fa-solid fa-computer"></i>
+                            <span class="sec1-item">Computer</span>
+                            <span class="span">|</span>
+                        </div>
+                        <div class="sub-sec">
+                            <i class="fa-solid fa-clock"></i>
+                            <span class="sec1-item">Smart Watch</span>
+                            <span class="span">|</span>
+                        </div>
+                        <div class="sub-sec" >
+                            <i class="fa-solid fa-camera"></i>
+                            <span class="sec1-item">Camera</span>
+                            <span class="span">|</span>
+                        </div>
+                        <div class="sub-sec">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span class="sec1-item">Headphone</span>
+                            <span class="span">|</span>
+                        </div>
+                        <div class="sub-sec">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span class="sec1-item">Gaming</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    
+
+<br>
+<br>
+<br>
+<br>
+<!-- <br> -->
+
+    <section class="section1">
+        <div class="container">
+            <div class="text">
+                <p>Pro.Beyond</p>
+                <h1>IPhone 14 <strong>Pro</strong></h1>
+                <small>Create to change everything for the better.For everyone</small>
+                <br>
+                <button>Shop Now</button>
+            </div>
+
+            <div class="section-1-img">
+                <picture>
+                    
+                    <source media="(max-width:768px)" srcset="mobile-home-img.png">
+                    <img src="IphoneImage.png" id="Iphone-image" alt="section-home-img">
+                  </picture>
+               
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <section class="section2">
+            <div class="sec2-div1">
+                <div class="sec2-div1-part1">
+                    <div class="sec2-div1-part1-img">
+                        <picture>
+                            <source media="(max-width:768px)" srcset="PlayStation1.png">
+                            <img src="PlayStation.png" alt="Flowers">
+                          </picture>
+            
+                    </div>
+                    <div class="sec2-div1-part1-text">
+                        <h1>Playstation <strong>5</strong></h1>
+                        <p>Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience.<p>
+                    </div>
+                </div>
+        
+                <div class="sec2-div1-part2">
+                    <div class="sec2-div1-part2-1">
+                        <div class="sec2-div1-part2-1-img">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="headset.png">
+                                <img src="hero__gnfk5g59t0qe_xlarge_2x1.png"  alt="Flowers" >
+                              </picture>
+                            
+                        </div>
+                        <div class="sec2-div1-part2-1-text">
+                            <h1>Apple Airpod<strong>Max</strong></h1>
+                            <p>Computational audio. Listen, it's powerful.<p>
+                        </div>
+                        
+                    </div>
+                    <div class="sec2-div1-part2-2">
+                        <div class="sec2-div1-part2-2-img">
+
+                            <picture>
+                                <source media="(max-width:768px)" srcset="visionpro.png">
+                                <img src="image-36.png"  alt="Flowers" >
+                              </picture>
+                          
+                        </div>
+                        <div class="sec2-div1-part2-2-text">
+                            <h1>Apple Vision<strong>Pro</strong></h1>
+                            <p>An immersive way to experience entertainment<p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="sec2-div2">
+                <div class="sec2-div2-part1">
+                    <h1>Macbook <strong>Air</strong></h1>
+                    <small>The new 15 inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.</small>
+                    <br>
+                    <button>Shop Now</button>
+                </div>
+                <div class="sec2-div2-part2">
+                    <picture>
+                        <source media="(max-width:768px)" srcset="MacBook.png">
+                        <img src="MacBookPro14.png" alt="Flowers" id="sec2-div2-part2-img" >
+                      </picture>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section class="section3">
+            <div class="sec3-div">
+                <div class="sec3-head">
+                    <h2 id="sec3-h21">Browse By Categories</h2>
+                    <h2 id="sec3-h22">    &lt;  &gt; </h2>
+                </div>
+                <div class="sec3-cat">
+                  
+                    <div class="sub-sec3" >
+                        <i class="fa-solid fa-mobile"></i>
+                        <br>
+                        <span>Phone</span>
+                        
+                    </div>
+                    <div class="sub-sec3" >
+                        <i class="fa-solid fa-computer"></i>
+                        <br>
+                        <span>Computer</span>
+                        
+                    </div>
+                
+                    <div class="sub-sec3" >
+                        <i class="fa-solid fa-clock"></i>
+                        <br>
+                        <span>Smart Watch</span>
+                    
+                    </div>
+                    <div class="sub-sec3">
+                        <i class="fa-solid fa-camera"></i>
+                        <br>
+                        <span>Camera</span>
+                    
+                    
+                    </div>
+                
+                    <div class="sub-sec3">
+                        <i class="fa-solid fa-headphones"></i>
+                        <br>
+                        <span>Headphone</span>
+                    
+                    </div>
+                    <div class="sub-sec3">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <br>
+                        <span>Gaming</span>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    </div>
+        <div class="container">
+        <section class="section-4">
+            <div class="sec4-cat">
+                <ul>
+                    <li ><a href="" id="active-li">New Arrival</a></li>
+                    <li><a href="">Best Sellers</a></li>
+                    <li><a href="">Featured Products</a></li>
+                </ul>
+            </div>
+            <div class="sec4-items">
+                <div class="items-row">
+                    <div class="items">
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="camera.png" alt="">
+                        <div class="items-desc">
+                            <p>Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)</p>
+                            <span>$900</span>
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                        
+                    <div class="items">
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="Iphone14pro1.png" alt="">
+                        <div class="items-desc">
+                            <p>Blackmagic Pocket Cinema Camera 6k</p>
+                            <span>$2535</span>
+                            <button>Buy Now</button>
+                        </div>
+                            
+                    </div>
+                    <div class="items">
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="smartwatch.png" alt="">
+                        <div class="items-desc">
+                            <p>Apple Watch Series 9 GPS 41mm Starlight Aluminium Case</p>
+                            <span>$399</span>
+                            <button>Buy Now</button>
+                        </div>
+                        
+                    </div>
+                    <div class="items">
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="headset.png" alt="">
+                        <div class="items-desc">
+                            <p>AirPods Max Silve rClassic 47mm Black
+                            </p>
+                            <span>$549</span>
+                            <button>Buy Now</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="items-row">
+                    <div class="items">
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="roundwatch.png" alt="">
+                        <div class="items-desc">
+                            <p>Samsung Galaxy Watch6 Classic 47mm Black</p>
+                            <span>$369</span>
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                        
+                    <div class="items">
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="galaxy.png" alt="">
+                        <div class="items-desc">
+                            <p>Galaxy Z Fold5 Unlocked | 256GB | Phantom Black</p>
+                            <span>$1769</span>
+                            <button>Buy Now</button>
+                        </div>
+                            
+                    </div>
+                    <div class="items">
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="earpod.png" alt="">
+                        <div class="items-desc">
+                            <p>Galaxy Buds FE Graphite| 256GB | Phantom Black</p>
+                            <span>$99.99</span>
+                            <button>Buy Now</button>
+                        </div>
+                        
+                    </div>
+                    <div class="items">
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="ipad.png" alt="">
+                        <div class="items-desc">
+                            <p>Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</p>
+                            <span>$398</span>
+                            <button>Buy Now</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <div class="container"> 
+            <section class="section5">
+              <div class="sec5-row">
+                    <div class="sec5-col1">
+                        <div class="img">
+                            <img src="Pair.png" alt="" class="img-3" >
+                           
+                         </div>
+                        <div class="sec5-text">
+                            <h1>Popular Products</h1>
+                            <p>
+                                iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+                            </p>
+                            <button>Shop Now</button>
+                        </div>
+                  </div>
+              
+                    <div class="sec5-col2">
+                        <div class="img"> 
+                            <img src="image64.png" alt="" class="img-3">
+                        
+                        </div>
+                        <div class="sec5-text">
+                            <h1>Ipad Pro</h1>
+                            <p>
+                                iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+                            </p>
+                            <button>Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="sec5-col3">
+                        <div class="img">
+                            <img src="image41.png" alt="" class="img-3">
+    
+                        </div>
+                        <div class="sec5-text">
+                            <h1>Samsung Galaxy</h1>
+                            <p>
+                                iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+                            </p>
+                            <button>Shop Now</button>
+                        </div>
+                    </div>
+                     <div class="sec5-col4">
+                        <div class="img">
+                            <img src="Macbook1.png" alt="" class="img-3">
+                    
+                        </div>
+                        <div class="sec5-text">
+                            <h1>MacBook Pro</h1>
+                            <p>
+                                iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+                            </p>
+                            <button>Shop Now</button>
+                        </div>
+                    </div>
+             </div>  
+
+            </section>
+        </div>  
+
+
+<div class="container">
+    <section class="section6">
+        <div class="sec6">
+        <div class="sec6-head">
+            <h2 class="sec6-h2">Discounts up to -50%</h2>
+        </div>
+        <div class="discount-box">
+            <div class="se6-items">
+                <i class="fa-regular fa-heart"></i>
+                <img src="ipo.png" alt="">
+                <div class="items-desc">
+                    <p>Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)</p>
+                    <span>$900</span>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div class="se6-items">
+                <i class="fa-regular fa-heart"></i>
+                <img src="headset.png" alt="">
+                <div class="items-desc">
+                    <p>AirPods Max Silve rClassic 47mm Black
+                    </p>
+                    <span>$549</span>
+                    <button>Buy Now</button>
+                </div>
+                
+            </div>
+            <div class="se6-items">
+                <i class="fa-regular fa-heart"></i>
+                <img src="Iphone14pro.png" alt="">
+                <div class="items-desc">
+                    <p>Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)</p>
+                    <span>$900</span>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div class="se6-items">
+                <i class="fa-regular fa-heart"></i>
+                <img src="iphone.png" alt="">
+                <div class="items-desc">
+                    <p>Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)</p>
+                    <span>$900</span>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+    <section id="sec7">
+        <div  class="section7">
+            <div class="sec7-divimg1">
+                <picture>
+                    <source media="(max-width:768px)" srcset="foot-img1.png">
+                    <img src="image6.png" alt="" class="sec7img-1" >
+                  </picture>
+                  <picture>
+                    <source media="(max-width:768px)" srcset="foot-img2.png">
+                    <img src="image18.png" alt="" class="sec7img-2">
+                  </picture>
+                  <picture>
+                    <source media="(max-width:768px)" srcset="foot-img3.png">
+                    <img src="jbl_jr_310bt_blue1.png" alt="" class="sec7img-3">
+                  </picture>
+               
+               
+               
+
+            </div>
+            <div class="sec7-content">
+                <h1>Big Summer <strong>Sale</strong></h1>
+                <p>Commodo fames vitae vitae leo mauris in. Eu consequat.</p>
+                <div class="but">
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div class="sec7-divimg2">
+                <picture>
+                    <source media="(max-width:768px)" srcset="foot-img4.png" class="sec7img-4">
+                    <img src="image8.png" alt="" class="sec7img-4">
+                  </picture>
+                  <picture>
+                    <source media="(max-width:768px)" srcset="foot-img5.png" class="sec7img-5">
+                    <img src="image7.png" alt="" class="sec7img-5">
+                  </picture>
+                
+                
+
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="foot-row">
+            <div class="foot-col1">
+                <img src="footlogo.png" alt="">
+                <p>We are a residential interior design firm located in Portland. Our boutique-studio offers more than</p>
+            </div>
+            <div class="foot-col2">
+                
+                <p>Services</p>
+                
+                <ul>
+                    <li>Bonus program</li>
+                    <li>Gift carsd</li>
+                    <li>Credit and payment</li>
+                    <li>Service contracts</li>
+                    <li>Non-cash account</li>
+                    <li>Payment</li>
+                </ul>
+            </div>
+            <div class="foot-col3">
+                
+                <p>Assistance to the buyer</p>
+                
+                <ul>
+                    <li>Find an order</li>
+                    <li>Terms of delivery</li>
+                    <li>Exchange and return of goods</li>
+                    <li>Guarantee</li>
+                    <li>Frequently asked questions</li>
+                    <li>Terms of use of the site</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="foot-div2">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+
+    </footer>
+</div>
+</body>
+</html>
